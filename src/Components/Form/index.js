@@ -6,7 +6,7 @@ class Form extends React.Component
     {
         super(props);
         this.state = {
-            nombre: props.alumnos[0].nombre,
+            nombre: "",
             materia: props.materias[0].materia,
             nota: 0
         };

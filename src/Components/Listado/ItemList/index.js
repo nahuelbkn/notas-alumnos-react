@@ -10,7 +10,7 @@ class Itemlist extends React.Component
                 this.props.alumno && 
                 (
                     <>
-                        <h3> {this.props.alumno.nombre}</h3>
+                        <h5> {this.props.alumno.nombre}</h5>
                         <ul>
                         {
                             this.props.alumno.materias.map(function(materia)

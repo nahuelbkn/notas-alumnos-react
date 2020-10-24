@@ -7,18 +7,17 @@ class Listado extends React.Component
     {
         super(props);
         this.state = {
-            alumnos: this.props.alumnos
+    
         }
     }
     
     render()
     {
         return (
-            this.state.alumnos && (
-                this.state.alumnos.map( (alumno) => {
-                    return <Itemlist alumno={alumno}></Itemlist>
-                })
-            )
+            
+            this.props.alumnos.map( (alumno) => {
+                return <Itemlist alumno={alumno}></Itemlist>
+            })
            
         )
     }

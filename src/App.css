@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+div.columnas
+{margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+div.columna
+{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

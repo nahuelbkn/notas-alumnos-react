@@ -1,12 +1,13 @@
 import React from 'react';
-import NavBar from "./NavBar";
+
 import ALUMNOS from "./alumnos";
 import MATERIAS from "./materias";
 
 import './App.css';
-import Form from './Form';
-import Listado from './Listado';
-import FormGustavo from './FormGustavo';
+
+import NavBar from "./Components/NavBar";
+import Form from './Components/Form';
+import Listado from './Components/Listado';
 
 
 
@@ -16,7 +17,7 @@ class App extends React.Component
   {
     super();
     this.state = {
-      notasAlumnos: [ {nombre: "Pepe", materias: [{nombre: "materiaPrueba", nota: 11}]}, {nombre: "Pepe", materias: [{nombre: "materiaPrueba", nota: 11}]} ]
+      notasAlumnos: []
     }
   }
 
@@ -100,11 +101,11 @@ saveData = (objAlumno) => {
       <>
         
         <NavBar title={"Guayerd High School"}></NavBar>
-  
-        <Form saveData={this.saveData} alumnos={ALUMNOS} materias={MATERIAS}></Form>
-  
-        <Listado alumnos={this.state.notasAlumnos}></Listado>
 
+        <div className="columnas">
+          <Form saveData={this.saveData} alumnos={ALUMNOS} materias={MATERIAS}></Form>
+          <Listado alumnos={this.state.notasAlumnos}></Listado>
+        </div>
   
       
   
